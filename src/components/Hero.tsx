@@ -46,23 +46,25 @@ const Hero = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center mt-8 gap-5 z-20 opacity-0 animate-fade-up delay-300">
-            <Link to="#Digital Twin" className="flex items-center gap-2 group">
-              <InteractiveHoverButton 
-                text="Dashboard" 
-                className="w-40 h-12 text-base shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30 transition-all duration-300" 
-              />
-            </Link>
-            <Link to="#features" className="flex items-center gap-2 group">
-              <Button 
-                size="lg" 
-                variant="outline" 
-                className="rounded-full h-12 px-6 text-base border-2 hover:bg-primary hover:text-primary-foreground hover:border-primary shadow-lg hover:shadow-xl transition-all duration-300"
-              >
-                Explore Features
-                <ArrowRight className="ml-2 size-5 group-hover:translate-x-1 transition-transform duration-300" />
-              </Button>
-            </Link>
-          </div>
+  <a href="https://shaktidashboard.vercel.app/" className="flex items-center gap-2 group">
+    <InteractiveHoverButton 
+      text="Dashboard" 
+      className="w-40 h-12 text-base shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30 transition-all duration-300" 
+    />
+  </a>
+
+  <a href="#features" className="flex items-center gap-2 group">
+    <Button 
+      size="lg" 
+      variant="outline" 
+      className="rounded-full h-12 px-6 text-base border-2 hover:bg-primary hover:text-primary-foreground hover:border-primary shadow-lg hover:shadow-xl transition-all duration-300"
+    >
+      Explore Features
+      <ArrowRight className="ml-2 size-5 group-hover:translate-x-1 transition-transform duration-300" />
+    </Button>
+  </a>
+</div>
+
 
           {/* Hero Video */}
           <div className="relative rounded-xl lg:rounded-[32px] border border-border p-2 backdrop-blur-lg mt-10 max-w-4xl mx-auto opacity-0 animate-scale-in delay-400">
