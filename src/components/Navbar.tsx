@@ -62,7 +62,7 @@ const Navbar = () => {
               Digital Twin
             </a>
             <a
-              href="file:///Users/aadiprasad/Downloads/ehv_substation_digital_twin_ultra.html"
+              href="https://3d-model-n4cx.vercel.app/"
               className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300"
             >
               3d Model
@@ -77,13 +77,13 @@ const Navbar = () => {
 
           <div className="flex items-center gap-3 animate-fade-in delay-200">
             <a
-              href=""
+              href="https://shaktidashboard.vercel.app/"
               className="hidden md:inline-block text-sm text-muted-foreground hover:text-foreground transition-colors duration-300"
             >
               Log in
             </a>
             <a
-              href="#signup"
+              href="https://shaktidashboard.vercel.app/"
               className="hidden md:inline-block px-4 py-2 rounded-full text-sm font-medium bg-primary text-primary-foreground hover:brightness-105 transition-all duration-300"
             >
               Sign up
