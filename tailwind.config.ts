@@ -7,7 +7,7 @@ export default {
   theme: {
     container: {
       center: true,
-      padding: "2rem",
+      padding: "1rem",
       screens: {
         "2xl": "1400px",
       },
@@ -78,10 +78,45 @@ export default {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        orbit: {
+          "0%": {
+            transform: "rotate(calc(var(--angle) * 1deg)) translateX(calc(var(--radius) * 1px)) rotate(calc(var(--angle) * -1deg))",
+          },
+          "100%": {
+            transform: "rotate(calc(var(--angle) * 1deg + 360deg)) translateX(calc(var(--radius) * 1px)) rotate(calc((var(--angle) + 360) * -1deg))",
+          },
+        },
+        flip: {
+          to: { rotate: "360deg" },
+        },
+        rotate: {
+          to: { transform: "rotate(90deg)" },
+        },
+        "image-glow": {
+          "0%, 100%": { opacity: "0.5" },
+          "50%": { opacity: "0.8" },
+        },
+        "text-blur-in": {
+          "0%": {
+            opacity: "0",
+            filter: "blur(12px)",
+            transform: "translateY(10px)",
+          },
+          "100%": {
+            opacity: "1",
+            filter: "blur(0)",
+            transform: "translateY(0)",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        orbit: "orbit calc(var(--duration)*1s) linear infinite",
+        flip: "flip 6s infinite steps(2, end)",
+        rotate: "rotate 3s linear infinite both",
+        "image-glow": "image-glow 4s ease-in-out infinite",
+        "text-blur-in": "text-blur-in 0.8s ease-out forwards",
       },
     },
   },

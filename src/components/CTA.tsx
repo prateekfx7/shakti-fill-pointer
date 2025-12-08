@@ -1,20 +1,33 @@
+import { MoveRight, PhoneCall } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+
 const CTA = () => {
   return (
-    <section id="contact" className="py-24 px-6">
-      <div className="container mx-auto max-w-2xl text-center">
-        <h2 className="text-2xl md:text-3xl font-semibold mb-4 opacity-0 animate-fade-up">
-          Experience real-time grid intelligence.
-        </h2>
-        <p className="text-muted-foreground mb-8 opacity-0 animate-fade-up delay-100">
-          Transform your substation
-          <br />
-          operations—see SHAKTI in
-          <br />
-          action today.
-        </p>
-        <button className="inline-flex items-center justify-center px-6 py-3 text-sm font-medium rounded-full border border-foreground bg-transparent text-foreground hover:bg-foreground hover:text-background transition-all duration-300 opacity-0 animate-fade-up delay-200">
-          Book a Demo
-        </button>
+    <section id="contact" className="w-full py-16 lg:py-24 px-4">
+      <div className="container mx-auto">
+        <div className="flex flex-col text-center bg-muted rounded-xl p-6 lg:p-14 gap-8 items-center opacity-0 animate-fade-up">
+          <div>
+            <Badge>Get started</Badge>
+          </div>
+          <div className="flex flex-col gap-2">
+            <h3 className="text-3xl md:text-5xl tracking-tighter max-w-xl font-semibold">
+              Experience real-time grid intelligence
+            </h3>
+            <p className="text-lg leading-relaxed tracking-tight text-muted-foreground max-w-xl">
+              Transform your substation operations—see SHAKTI in action today.
+              Get predictive maintenance and actionable analytics for your grid.
+            </p>
+          </div>
+          <div className="flex flex-col sm:flex-row gap-4">
+            <Button className="gap-4" variant="outline" size="lg">
+              Jump on a call <PhoneCall className="w-4 h-4" />
+            </Button>
+            <Button className="gap-4" size="lg">
+              Book a Demo <MoveRight className="w-4 h-4" />
+            </Button>
+          </div>
+        </div>
       </div>
     </section>
   );
