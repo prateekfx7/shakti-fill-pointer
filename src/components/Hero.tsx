@@ -6,7 +6,7 @@ import { InteractiveHoverButton } from "@/components/ui/interactive-hover-button
 
 const Hero = () => {
   return (
-    <div className="relative flex flex-col items-center justify-center w-full py-16 lg:py-24 overflow-hidden">
+    <div className="relative flex flex-col items-center justify-center w-full pt-24 lg:pt-32 pb-16 lg:pb-24 overflow-hidden">
       {/* Mobile glow */}
       <div className="absolute flex lg:hidden size-40 rounded-full bg-primary/20 blur-[10rem] top-0 left-1/2 -translate-x-1/2 -z-10"></div>
 
@@ -52,14 +52,21 @@ const Hero = () => {
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row items-center justify-center mt-6 gap-4 z-20 opacity-0 animate-fade-up delay-300">
+          <div className="flex flex-col sm:flex-row items-center justify-center mt-8 gap-5 z-20 opacity-0 animate-fade-up delay-300">
             <Link to="#contact" className="flex items-center gap-2 group">
-              <InteractiveHoverButton text="Book Demo" className="w-36" />
+              <InteractiveHoverButton 
+                text="Book Demo" 
+                className="w-40 h-12 text-base shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30 transition-all duration-300" 
+              />
             </Link>
             <Link to="#features" className="flex items-center gap-2 group">
-              <Button size="lg" variant="outline" className="rounded-full">
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="rounded-full h-12 px-6 text-base border-2 hover:bg-primary hover:text-primary-foreground hover:border-primary shadow-lg hover:shadow-xl transition-all duration-300"
+              >
                 Explore Features
-                <ArrowRight className="ml-2 size-4 group-hover:translate-x-1 transition-transform duration-300" />
+                <ArrowRight className="ml-2 size-5 group-hover:translate-x-1 transition-transform duration-300" />
               </Button>
             </Link>
           </div>
