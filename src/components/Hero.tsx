@@ -45,7 +45,7 @@ const Hero = () => {
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row items-center justify-center mt-8 gap-5 z-20 opacity-0 animate-fade-up delay-300">
+          <div href="https://shaktidashboard.vercel.app/" className="flex flex-col sm:flex-row items-center justify-center mt-8 gap-5 z-20 opacity-0 animate-fade-up delay-300">
             <Link to="#contact" className="flex items-center gap-2 group">
               <InteractiveHoverButton 
                 text="Dashboard" 
