@@ -56,7 +56,7 @@ const Navbar = () => {
               Features
             </a>
             <a
-              href="https://substation-twin-ai-92439.lovable.app/"
+              href="https://shaktidashboard.vercel.app/"
               className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300"
             >
               Digital Twin
