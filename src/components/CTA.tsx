@@ -21,10 +21,10 @@ const CTA = () => {
           </div>
           <div className="flex flex-col sm:flex-row gap-4">
             <Button className="gap-4" variant="outline" size="lg">
-              Jump on a call <PhoneCall className="w-4 h-4" />
+              Contact Us <PhoneCall className="w-4 h-4" />
             </Button>
             <Button className="gap-4" size="lg">
-              Book a Demo <MoveRight className="w-4 h-4" />
+              Say hello<MoveRight className="w-4 h-4" />
             </Button>
           </div>
         </div>

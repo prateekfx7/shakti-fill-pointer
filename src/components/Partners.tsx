@@ -1,30 +1,39 @@
-import { Square, Circle, Triangle } from "lucide-react";
+import { Square, Circle, Triangle, Zap } from "lucide-react";
+import { FeatureGrid, type Feature } from "@/components/ui/modern-feature-grid";
 
-const partners = [
-  { name: "PowerGen", icon: Square },
-  { name: "GridSync", icon: Circle },
-  { name: "UtilTech", icon: Triangle },
-  { name: "SmartSub", icon: Square },
+const partners: Feature[] = [
+  {
+    Icon: Square,
+    title: "PowerGen",
+    description: "Leading provider of power generation solutions and grid infrastructure technologies.",
+  },
+  {
+    Icon: Circle,
+    title: "GridSync",
+    description: "Innovative grid synchronization and real-time monitoring systems for modern utilities.",
+  },
+  {
+    Icon: Triangle,
+    title: "UtilTech",
+    description: "Advanced utility technology solutions for smart grid management and optimization.",
+  },
+  {
+    Icon: Zap,
+    title: "SmartSub",
+    description: "Cutting-edge substation automation and intelligent monitoring platforms.",
+  },
 ];
 
 const Partners = () => {
   return (
-    <section id="partners" className="py-10 px-4">
-      <div className="container mx-auto">
-        <div className="flex flex-wrap justify-center items-center gap-12 md:gap-20">
-          {partners.map((partner, index) => (
-            <div
-              key={partner.name}
-              className="flex items-center gap-3 text-muted-foreground opacity-0 animate-fade-up"
-              style={{ animationDelay: `${index * 100}ms`, animationFillMode: "forwards" }}
-            >
-              <partner.icon className="h-4 w-4" />
-              <span className="text-sm font-medium">{partner.name}</span>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
+    <FeatureGrid
+      sectionTitle="Trusted Partners"
+      sectionDescription="We collaborate with industry leaders to deliver the most advanced substation monitoring solutions."
+      features={partners}
+      id="partners"
+      className="opacity-0 animate-fade-up"
+      style={{ animationDelay: "50ms", animationFillMode: "forwards" }}
+    />
   );
 };
 

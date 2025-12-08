@@ -1,23 +1,16 @@
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { OrbitingCircles } from "@/components/ui/orbiting-circles";
+import { ShaderAnimation } from "@/components/ui/shader-animation";
 import { InteractiveHoverButton } from "@/components/ui/interactive-hover-button";
 
 const Hero = () => {
   return (
     <div className="relative flex flex-col items-center justify-center w-full pt-24 lg:pt-32 pb-16 lg:pb-24 overflow-hidden">
-      {/* Mobile glow */}
-      <div className="absolute flex lg:hidden size-40 rounded-full bg-primary/20 blur-[10rem] top-0 left-1/2 -translate-x-1/2 -z-10"></div>
+      {/* Shader Animation Background */}
+      <ShaderAnimation />
 
-      <div className="flex flex-col items-center justify-center gap-y-8 relative">
-        {/* Orbiting circles - visible on larger screens */}
-        <div className="hidden lg:block">
-          <OrbitingCircles speed={0.5} radius={300} />
-          <OrbitingCircles speed={0.25} radius={400} />
-          <OrbitingCircles speed={0.1} radius={500} />
-        </div>
-
+      <div className="flex flex-col items-center justify-center gap-y-8 relative z-10">
         <div className="flex flex-col items-center justify-center text-center gap-y-4 bg-background/0 px-4">
           {/* Spark badge */}
           <button className="group relative grid overflow-hidden rounded-full px-2 py-1 shadow-[0_1000px_0_0_hsl(0_0%_15%)_inset] transition-colors duration-200 mx-auto opacity-0 animate-fade-up">
@@ -55,7 +48,7 @@ const Hero = () => {
           <div className="flex flex-col sm:flex-row items-center justify-center mt-8 gap-5 z-20 opacity-0 animate-fade-up delay-300">
             <Link to="#contact" className="flex items-center gap-2 group">
               <InteractiveHoverButton 
-                text="Book Demo" 
+                text="Dashboard" 
                 className="w-40 h-12 text-base shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30 transition-all duration-300" 
               />
             </Link>
