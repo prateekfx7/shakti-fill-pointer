@@ -23,7 +23,7 @@ const FAQ = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section className="py-24 px-6">
+    <section className="py-16 px-4">
       <div className="container mx-auto max-w-2xl">
         <div className="space-y-4">
           {faqs.map((faq, index) => (

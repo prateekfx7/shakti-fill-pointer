@@ -84,12 +84,45 @@
   }
 
   html {
-    scroll-behavior: smooth;
+    scroll-behavior: auto;
+  }
+
+  html.lenis, html.lenis body {
+    height: auto;
+  }
+
+  .lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+  }
+
+  .lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+  }
+
+  .lenis.lenis-stopped {
+    overflow: hidden;
+  }
+
+  .lenis.lenis-smooth iframe {
+    pointer-events: none;
   }
 
   body {
     @apply bg-background text-foreground font-sf antialiased;
   }
+}
+
+/* Glass effect for footer */
+.glass-footer {
+  backdrop-filter: blur(12px) saturate(180%);
+  background: radial-gradient(circle, hsl(var(--background) / 0.9) 0%, hsl(var(--muted) / 0.3) 60%, hsl(var(--background) / 0.95) 100%);
+  border: 1px solid hsl(var(--border) / 0.3);
+}
+
+.dark .glass-footer {
+  backdrop-filter: blur(12px);
+  background: radial-gradient(circle, hsl(var(--background) / 0.8) 0%, hsl(var(--muted) / 0.2) 60%, hsl(var(--background) / 0.9) 100%);
+  border: 1px solid hsl(var(--border) / 0.2);
 }
 
 @layer utilities {
@@ -118,6 +151,10 @@
 
   .animate-slide-in-right {
     animation: slideInRight 0.6s ease-out forwards;
+  }
+
+  .animate-text-blur-in {
+    animation: textBlurIn 0.8s ease-out forwards;
   }
 
   .delay-100 {
@@ -195,5 +232,53 @@
   to {
     opacity: 1;
     transform: translateX(0);
+  }
+}
+
+/* Text blur in animation */
+@keyframes textBlurIn {
+  0% {
+    opacity: 0;
+    filter: blur(12px);
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+  }
+}
+
+/* Orbit animation for circles */
+@keyframes orbit {
+  0% {
+    transform: rotate(calc(var(--angle) * 1deg)) translateX(calc(var(--radius) * 1px)) rotate(calc(var(--angle) * -1deg));
+  }
+  100% {
+    transform: rotate(calc(var(--angle) * 1deg + 360deg)) translateX(calc(var(--radius) * 1px)) rotate(calc((var(--angle) + 360) * -1deg));
+  }
+}
+
+/* Flip animation for spark effect */
+@keyframes flip {
+  to {
+    rotate: 360deg;
+  }
+}
+
+/* Rotate animation for spark */
+@keyframes rotate {
+  to {
+    transform: rotate(90deg);
+  }
+}
+
+/* Image glow animation */
+@keyframes imageGlow {
+  0%, 100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.8;
   }
 }
