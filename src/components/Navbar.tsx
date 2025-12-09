@@ -74,10 +74,10 @@ const Navbar = () => {
               SLD Model
             </a>
             <a
-              href="#contact"
+              href="https://shakti-ai-caller.vercel.app/"
               className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300"
             >
-              Contact
+              SOS System
             </a>
           </div>
 
