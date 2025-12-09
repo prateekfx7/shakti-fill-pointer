@@ -68,6 +68,12 @@ const Navbar = () => {
               3d Model
             </a>
             <a
+              href="https://substation-sld.vercel.app/"
+              className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300"
+            >
+              SLD Model
+            </a>
+            <a
               href="#contact"
               className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300"
             >
