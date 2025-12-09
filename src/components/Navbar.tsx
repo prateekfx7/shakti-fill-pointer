@@ -56,7 +56,7 @@ const Navbar = () => {
               Features
             </a>
             <a
-              href="https://fusion-engine-hub.vercel.app/auth"
+              href="https://ai-project-engine.vercel.app/"
               className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300"
             >
               Digital Twin
@@ -83,13 +83,13 @@ const Navbar = () => {
 
           <div className="flex items-center gap-3 animate-fade-in delay-200">
             <a
-              href="https://fusion-engine-hub.vercel.app/auth"
+              href="https://ai-project-engine.vercel.app/"
               className="hidden md:inline-block text-sm text-muted-foreground hover:text-foreground transition-colors duration-300"
             >
               Log in
             </a>
             <a
-              href="https://fusion-engine-hub.vercel.app/auth"
+              href="https://ai-project-engine.vercel.app/"
               className="hidden md:inline-block px-4 py-2 rounded-full text-sm font-medium bg-primary text-primary-foreground hover:brightness-105 transition-all duration-300"
             >
               Sign up
